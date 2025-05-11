@@ -86,31 +86,33 @@
                     <p class="mt-3 mb-4">
                         At Fraîcheur, we believe in the magic of baking. Since 2010, we've been crafting artisanal bread, pastries, and cakes using time-honored recipes and the finest ingredients. Our passion is to bring joy to your table with every bite.
                     </p>
-                    <div class="d-flex pt-4 mb-3">
-                        <div class="iconbox me-4">
-                            <i class="ri-heart-fill"></i>
+                    <div class="story-features">
+                        <div class="story-feature-item" data-aos="fade-up">
+                            <div class="story-icon">
+                                <i class="ri-heart-fill"></i>
+                            </div>
+                            <div class="story-content">
+                                <h5>Made with Love</h5>
+                                <p>Every product is baked with care and dedication, ensuring a perfect balance of flavor and texture.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h5>Made with Love</h5>
-                            <p>Every product is baked with care and dedication, ensuring a perfect balance of flavor and texture.</p>
+                        <div class="story-feature-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="story-icon">
+                                <i class="ri-leaf-fill"></i>
+                            </div>
+                            <div class="story-content">
+                                <h5>Fresh Ingredients</h5>
+                                <p>We source only the freshest, locally-sourced ingredients to create wholesome and delicious treats.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex mb-3">
-                        <div class="iconbox me-4">
-                            <i class="ri-leaf-fill"></i>
-                        </div>
-                        <div>
-                            <h5>Fresh Ingredients</h5>
-                            <p>We source only the freshest, locally-sourced ingredients to create wholesome and delicious treats.</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="iconbox me-4">
-                            <i class="ri-star-fill"></i>
-                        </div>
-                        <div>
-                            <h5>Customer Satisfaction</h5>
-                            <p>Your happiness is our priority. We strive to exceed your expectations with every order.</p>
+                        <div class="story-feature-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="story-icon">
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <div class="story-content">
+                                <h5>Customer Satisfaction</h5>
+                                <p>Your happiness is our priority. We strive to exceed your expectations with every order.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -322,20 +324,44 @@
         <div class="container text-center">
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6" data-aos="fade-up">
-                    <h1 class="text-white display-4">10,00+</h1>
-                    <h6 class="text-uppercase mb-0 text-white mt-3">Happy Customers</h6>
+                    <div class="counter-item">
+                        <div class="counter-icon">
+                            <i class="ri-user-smile-fill"></i>
+                        </div>
+                        <h1 class="text-white display-4 counter-number">10,000+</h1>
+                        <h6 class="text-uppercase mb-0 text-white mt-3">Happy Customers</h6>
+                        <div class="counter-line"></div>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <h1 class="text-white display-4">50,00+</h1>
-                    <h6 class="text-uppercase mb-0 text-white mt-3">Cakes Baked</h6>
+                    <div class="counter-item">
+                        <div class="counter-icon">
+                            <i class="ri-cake-3-fill"></i>
+                        </div>
+                        <h1 class="text-white display-4 counter-number">50,000+</h1>
+                        <h6 class="text-uppercase mb-0 text-white mt-3">Cakes Baked</h6>
+                        <div class="counter-line"></div>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                    <h1 class="text-white display-4">100,00+</h1>
-                    <h6 class="text-uppercase mb-0 text-white mt-3">Fresh Loaves</h6>
+                    <div class="counter-item">
+                        <div class="counter-icon">
+                            <i class="ri-bread-fill"></i>
+                        </div>
+                        <h1 class="text-white display-4 counter-number">100,000+</h1>
+                        <h6 class="text-uppercase mb-0 text-white mt-3">Fresh Loaves</h6>
+                        <div class="counter-line"></div>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                    <h1 class="text-white display-4">999+</h1>
-                    <h6 class="text-uppercase mb-0 text-white mt-3">Events Catered</h6>
+                    <div class="counter-item">
+                        <div class="counter-icon">
+                            <i class="ri-calendar-event-fill"></i>
+                        </div>
+                        <h1 class="text-white display-4 counter-number">999+</h1>
+                        <h6 class="text-uppercase mb-0 text-white mt-3">Events Catered</h6>
+                        <div class="counter-line"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -355,22 +381,36 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <form class="contact-form" data-aos="fade-up">
+                    <form class="contact-form theme-shadow p-4 p-lg-5 rounded" data-aos="fade-up">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    <label for="name"><i class="ri-user-line me-2"></i>Your Name</label>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                    <label for="email"><i class="ri-mail-line me-2"></i>Your Email</label>
+                                </div>
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Subject">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject"><i class="ri-chat-1-line me-2"></i>Subject</label>
+                                </div>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                                    <label for="message"><i class="ri-message-2-line me-2"></i>Your Message</label>
+                                </div>
                             </div>
                             <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-brand">Send Message</button>
+                                <button type="submit" class="btn btn-brand px-5 py-3">
+                                    <i class="ri-send-plane-fill me-2"></i>Send Message
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -380,35 +420,97 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <h5 class="mb-3">Fraîcheur Bakery</h5>
-                    <p>Bringing joy through artisanal baking since 2010.</p>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#hero" class="text-white">Home</a></li>
-                        <li><a href="#about" class="text-white">About</a></li>
-                        <li><a href="#menu" class="text-white">Menu</a></li>
-                        <li><a href="#contact" class="text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="mb-3">Contact Info</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="ri-map-pin-line me-2"></i> 123 Bakery Street, City</li>
-                        <li><i class="ri-phone-line me-2"></i> (555) 123-4567</li>
-                        <li><i class="ri-mail-line me-2"></i> info@fraicheur.com</li>
-                    </ul>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <i class="ri-bread-fill me-2"></i>Fraîcheur
+                            </div>
+                            <p class="mt-3">Bringing joy through artisanal baking since 2010. We craft each product with love and dedication to ensure the perfect taste and experience.</p>
+                            <div class="footer-social mt-4">
+                                <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                                <a href="#" class="social-link"><i class="ri-instagram-fill"></i></a>
+                                <a href="#" class="social-link"><i class="ri-twitter-fill"></i></a>
+                                <a href="#" class="social-link"><i class="ri-pinterest-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Quick Links</h5>
+                            <ul class="footer-links">
+                                <li><a href="#hero"><i class="ri-arrow-right-s-line"></i>Home</a></li>
+                                <li><a href="#about"><i class="ri-arrow-right-s-line"></i>About</a></li>
+                                <li><a href="#menu"><i class="ri-arrow-right-s-line"></i>Menu</a></li>
+                                <li><a href="#services"><i class="ri-arrow-right-s-line"></i>Services</a></li>
+                                <li><a href="#contact"><i class="ri-arrow-right-s-line"></i>Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Opening Hours</h5>
+                            <ul class="footer-hours">
+                                <li>
+                                    <span>Monday - Friday</span>
+                                    <span>7:00 AM - 8:00 PM</span>
+                                </li>
+                                <li>
+                                    <span>Saturday</span>
+                                    <span>8:00 AM - 6:00 PM</span>
+                                </li>
+                                <li>
+                                    <span>Sunday</span>
+                                    <span>9:00 AM - 4:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h5 class="widget-title">Contact Info</h5>
+                            <ul class="footer-contact">
+                                <li>
+                                    <i class="ri-map-pin-line"></i>
+                                    <span>123 Bakery Street, City, Country</span>
+                                </li>
+                                <li>
+                                    <i class="ri-phone-line"></i>
+                                    <span>(555) 123-4567</span>
+                                </li>
+                                <li>
+                                    <i class="ri-mail-line"></i>
+                                    <span>info@fraicheur.com</span>
+                                </li>
+                            </ul>
+                            <div class="footer-newsletter mt-4">
+                                <h6>Subscribe to Newsletter</h6>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Your email address">
+                                    <button type="submit"><i class="ri-send-plane-fill"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <hr class="my-4">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2024 Fraîcheur Bakery. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Fraîcheur Bakery. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Cookie Policy</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
