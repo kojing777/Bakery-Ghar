@@ -1,530 +1,822 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fraîcheur Bakery</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+      <div class="container">
+        <div class="announcement-content">
+          <p><i class="ri-truck-line"></i> Free Shipping on Orders Above $50</p>
+          <span class="separator">|</span>
+          <p><i class="ri-gift-line"></i> 20% OFF on First Purchase</p>
+          <span class="separator">|</span>
+          <p><i class="ri-lock-line"></i> Use Code: <strong>Kojing777</strong></p>
+        </div>
+      </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="ri-bread-fill me-2"></i>Fraîcheur
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="ri-bread-fill me-2"></i>Fraîcheur
+        </a>
+        <div class="d-flex align-items-center">
+          <div class="nav-icons d-flex d-lg-none me-3">
+            <a href="#" class="nav-icon-link" aria-label="Cart">
+              <i class="ri-shopping-cart-2-line"></i>
+              <span class="cart-count">0</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <a href="#contact" class="btn btn-brand ms-lg-3">Order Now</a>
-            </div>
+            <a href="#" class="nav-icon-link ms-2" aria-label="Profile">
+              <i class="ri-user-line"></i>
+            </a>
+          </div>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <i class="ri-menu-line"></i>
+          </button>
         </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-icons d-none d-lg-flex">
+            <div class="search-container">
+              <i class="ri-search-line"></i>
+              <input type="text" placeholder="Search" class="search-input" />
+            </div>
+            <a href="#" class="nav-icon-link" aria-label="Cart">
+              <i class="ri-shopping-cart-2-line"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <a href="#" class="nav-icon-link" aria-label="Profile">
+              <i class="ri-user-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero -->
-    <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-uppercase text-white fw-semibold display-1" data-aos="fade-down">
-                        Artisanal Bakery
-                    </h1>
-                    <h5 class="text-white mt-3 mb-4" data-aos="fade-up">
-                        Freshly Baked Delights, Crafted with Love
-                    </h5>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <a href="#menu" class="btn btn-brand me-2">View Menu</a>
-                        <a href="#contact" class="btn btn-light ms-2">Order Online</a>
-                    </div>
-                </div>
-            </div>
+    <section id="hero" class="section-padding">
+      <div class="container">
+        <div class="theme-switch-wrapper">
+          <button
+            id="theme-toggle"
+            class="theme-switch"
+            aria-label="Toggle theme"
+          >
+            <i class="ri-sun-line light-icon"></i>
+            <i class="ri-moon-line dark-icon"></i>
+          </button>
         </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="hero-content">
+              <h1 class="display-4 fw-bold mb-4">
+                Artisanal Bakery
+                <span class="text-brand">Crafted with Love</span>
+              </h1>
+              <p class="lead mb-4">
+                Experience the perfect blend of tradition and innovation in
+                every bite. Freshly baked delights that bring joy to your table.
+              </p>
+              <div class="hero-buttons">
+                <a href="#menu" class="btn btn-brand me-3">
+                  Order Now
+                  <i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="hero-image">
+              <div class="slider-container">
+                <div class="slider-wrapper">
+                  <div class="slider">
+                    <img
+                      src="./assets/images/choco 1.png"
+                      class="slider-img"
+                      alt="Banner 1"
+                    />
+                    <img
+                      src="./assets/images/banner2.png"
+                      class="slider-img"
+                      alt="Banner 2"
+                    />
+                     <img
+                      src="./assets/images/Black Forest Cake.png"
+                      class="slider-img"
+                      alt="Banner 1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold" data-aos="fade-up">Our Story</h1>
-                        <div class="line"></div>
-                        <p data-aos="fade-up" data-aos-delay="100">Where Tradition Meets Innovation in Every Bite</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold" data-aos="fade-up">
+                Our Products
+              </h1>
+              <div class="line"></div>
+              <p data-aos="fade-up" data-aos-delay="100">
+                Handcrafted with Love, Delivered with Care
+              </p>
             </div>
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <img src="./assets/images/owner.jpeg" alt="Bakery Owner" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-lg-5" data-aos="fade-left">
-                    <h1 class="fw-bold">Our Passion</h1>
-                    <p class="mt-3 mb-4">
-                        At Fraîcheur, we believe in the magic of baking. Since 2010, we've been crafting artisanal bread, pastries, and cakes using time-honored recipes and the finest ingredients. Our passion is to bring joy to your table with every bite.
-                    </p>
-                    <div class="story-features">
-                        <div class="story-feature-item" data-aos="fade-up">
-                            <div class="story-icon">
-                                <i class="ri-heart-fill"></i>
-                            </div>
-                            <div class="story-content">
-                                <h5>Made with Love</h5>
-                                <p>Every product is baked with care and dedication, ensuring a perfect balance of flavor and texture.</p>
-                            </div>
-                        </div>
-                        <div class="story-feature-item" data-aos="fade-up" data-aos-delay="100">
-                            <div class="story-icon">
-                                <i class="ri-leaf-fill"></i>
-                            </div>
-                            <div class="story-content">
-                                <h5>Fresh Ingredients</h5>
-                                <p>We source only the freshest, locally-sourced ingredients to create wholesome and delicious treats.</p>
-                            </div>
-                        </div>
-                        <div class="story-feature-item" data-aos="fade-up" data-aos-delay="200">
-                            <div class="story-icon">
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <div class="story-content">
-                                <h5>Customer Satisfaction</h5>
-                                <p>Your happiness is our priority. We strive to exceed your expectations with every order.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/Artisanal Bread.png" alt="Artisanal Bread" class="img-fluid" />
+                <div class="product-badge">Best Seller</div>
+              </div>
+              <div class="product-info">
+                <h4>Artisanal Bread</h4>
+                <p class="mb-2">Freshly baked sourdough and specialty loaves</p>
+                <div class="rating mb-2">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$6.99</span>
+                  <a href="#" class="add-to-cart">
+                    <i class="ri-shopping-cart-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/Black Forest Cake.png" alt="Black Forest Cake" class="img-fluid" />
+                <div class="product-badge">Popular</div>
+              </div>
+              <div class="product-info">
+                <h4>Black Forest Cake</h4>
+                <p class="mb-2">Rich chocolate layers with cherry filling</p>
+                <div class="rating mb-2">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$45.99</span>
+                  <a href="#" class="add-to-cart">
+                    <i class="ri-shopping-cart-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/chocolate cake.png" alt="Chocolate Cake" class="img-fluid" />
+                <div class="product-badge">New</div>
+              </div>
+              <div class="product-info">
+                <h4>Chocolate Cake</h4>
+                <p class="mb-2">Decadent chocolate layers with ganache</p>
+                <div class="rating mb-2">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$39.99</span>
+                  <a href="#" class="add-to-cart">
+                    <i class="ri-shopping-cart-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/Croissants.png" alt="Croissants" class="img-fluid" />
+                <div class="product-badge">Fresh</div>
+              </div>
+              <div class="product-info">
+                <h4>Butter Croissants</h4>
+                <p class="mb-2">Flaky, buttery layers of perfection</p>
+                <div class="rating mb-2">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$3.99</span>
+                  <a href="#" class="add-to-cart">
+                    <i class="ri-shopping-cart-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="section-padding bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold" data-aos="fade-up">Our Menu</h1>
-                        <div class="line"></div>
-                        <p data-aos="fade-up" data-aos-delay="100">Discover our delicious selection of baked goods</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold" data-aos="fade-up">Our Categories</h1>
+              <div class="line"></div>
+              <p data-aos="fade-up" data-aos-delay="100">
+                Explore our wide range of delicious baked goods
+              </p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="menu-item">
-                        <div class="menu-img-wrapper">
-                            <img src="./assets/images/bread.jpeg" alt="Artisanal Bread" class="img-fluid rounded">
-                            <div class="menu-overlay">
-                                <div class="menu-actions">
-                                    <button class="btn btn-brand btn-sm me-2"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
-                                    <button class="btn btn-light btn-sm me-2"><i class="ri-heart-line"></i></button>
-                                    <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="ri-eye-line"></i></button>
-                                </div>
-                            </div>
-                            <div class="menu-badge">Best Seller</div>
-                        </div>
-                        <div class="menu-content">
-                            <div class="menu-rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-half-fill"></i>
-                                <span>(4.5)</span>
-                            </div>
-                            <h4>Artisanal Bread</h4>
-                            <p>Freshly baked sourdough, baguettes, and specialty loaves</p>
-                            <div class="menu-footer">
-                                <span class="price">$6.99 - $12.99</span>
-                                <button class="btn btn-outline-brand btn-sm">Customize</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="menu-item">
-                        <div class="menu-img-wrapper">
-                            <img src="./assets/images/blackForest.png" alt="Pastries" class="img-fluid rounded">
-                            <div class="menu-overlay">
-                                <div class="menu-actions">
-                                    <button class="btn btn-brand btn-sm me-2"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
-                                    <button class="btn btn-light btn-sm me-2"><i class="ri-heart-line"></i></button>
-                                    <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="ri-eye-line"></i></button>
-                                </div>
-                            </div>
-                            <div class="menu-badge">New</div>
-                        </div>
-                        <div class="menu-content">
-                            <div class="menu-rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <span>(5.0)</span>
-                            </div>
-                            <h4>Pastries</h4>
-                            <p>Croissants, danishes, and sweet treats</p>
-                            <div class="menu-footer">
-                                <span class="price">$3.99 - $5.99</span>
-                                <button class="btn btn-outline-brand btn-sm">Customize</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="menu-item">
-                        <div class="menu-img-wrapper">
-                            <img src="./assets/images/chocolate cake.png" alt="Cakes" class="img-fluid rounded">
-                            <div class="menu-overlay">
-                                <div class="menu-actions">
-                                    <button class="btn btn-brand btn-sm me-2"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
-                                    <button class="btn btn-light btn-sm me-2"><i class="ri-heart-line"></i></button>
-                                    <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="ri-eye-line"></i></button>
-                                </div>
-                            </div>
-                            <div class="menu-badge">Popular</div>
-                        </div>
-                        <div class="menu-content">
-                            <div class="menu-rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-half-fill"></i>
-                                <span>(4.8)</span>
-                            </div>
-                            <h4>Custom Cakes</h4>
-                            <p>Wedding cakes, birthday cakes, and special occasion desserts</p>
-                            <div class="menu-footer">
-                                <span class="price">Starting at $45</span>
-                                <button class="btn btn-outline-brand btn-sm">Customize</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="row g-4">
+          <!-- Category 1 -->
+          <div class="col-lg col-md-6" data-aos="fade-up">
+            <div class="category-card">
+              <div class="category-img">
+                <img src="./assets/images/bbread.png" alt="Breads" class="img-fluid" />
+              </div>
+              <div class="category-content">
+                <h3>Artisanal Breads</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="col-lg col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="category-card">
+              <div class="category-img">
+                <img src="./assets/images/choco 2.png" alt="Cakes" class="img-fluid" />
+              </div>
+              <div class="category-content">
+                <h3>Specialty Cakes</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="col-lg col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="category-card">
+              <div class="category-img">
+                <img src="./assets/images/pastries.png" alt="Pastries" class="img-fluid" />
+              </div>
+              <div class="category-content">
+                <h3>Pastries</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="col-lg col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="category-card">
+              <div class="category-img">
+                <img src="./assets/images/cookies.png" alt="Cookies" class="img-fluid" />
+              </div>
+              <div class="category-content">
+                <h3>Cookies & Biscuits</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+          <div class="col-lg col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="category-card">
+              <div class="category-img">
+                <img src="./assets/images/cupcake.png" alt="Cupcakes" class="img-fluid" />
+              </div>
+              <div class="category-content">
+                <h3>Cupcakes & Muffins</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Services -->
     <section id="services" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold" data-aos="fade-up">Our Services</h1>
-                        <div class="line"></div>
-                        <p data-aos="fade-up" data-aos-delay="100">Delicious treats crafted with love and precision</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold" data-aos="fade-up">
+                Our Services
+              </h1>
+              <div class="line"></div>
+              <p data-aos="fade-up" data-aos-delay="100">
+                Delicious treats crafted with love and precision
+              </p>
             </div>
-            <div class="row g-4 text-center">
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up">
-                    <div class="service theme-shadow p-lg-4 mb-4 p-4">
-                        <div class="iconbox service-icon">
-                            <i class="ri-cake-3-fill"></i>
-                        </div>
-                        <h5 class="mt-4 mb-3">Custom Cakes</h5>
-                        <p>We create stunning custom cakes for birthdays, weddings, and special occasions. Every cake is a masterpiece!</p>
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Custom Designs</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Fresh Ingredients</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Free Consultation</span>
-                            </div>
-                        </div>
-                        <a href="#contact" class="btn btn-outline-brand mt-4">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service theme-shadow p-lg-4 mb-4 p-4">
-                        <div class="iconbox service-icon">
-                            <i class="ri-bread-fill"></i>
-                        </div>
-                        <h5 class="mt-4 mb-3">Fresh Bread</h5>
-                        <p>Our artisanal bread is baked daily using traditional recipes and the finest ingredients. Perfectly crusty and soft inside.</p>
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Daily Fresh</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Traditional Recipes</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Local Ingredients</span>
-                            </div>
-                        </div>
-                        <a href="#menu" class="btn btn-outline-brand mt-4">View Menu</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service theme-shadow p-lg-4 mb-4 p-4">
-                        <div class="iconbox service-icon">
-                            <i class="ri-cookie-fill"></i>
-                        </div>
-                        <h5 class="mt-4 mb-3">Pastries & Desserts</h5>
-                        <p>Indulge in our range of pastries, cupcakes, and desserts. Each bite is a burst of flavor and happiness.</p>
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Handcrafted</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Premium Quality</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="ri-checkbox-circle-fill"></i>
-                                <span>Wide Selection</span>
-                            </div>
-                        </div>
-                        <a href="#menu" class="btn btn-outline-brand mt-4">Explore</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="row g-4 text-center">
+          <div class="col" data-aos="fade-up">
+            <div class="service theme-shadow">
+              <div class="iconbox service-icon">
+                <i class="ri-cake-3-line"></i>
+              </div>
+              <h5>Custom Cakes</h5>
+              <p>Stunning custom cakes for special occasions</p>
+              <div class="service-features">
+                <div class="feature-item">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <span>Custom Designs</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <span>Fresh Ingredients</span>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-outline-brand mt-3">Order Now</a>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="service theme-shadow">
+              <div class="iconbox service-icon">
+                <i class="ri-restaurant-2-line"></i>
+              </div>
+              <h5>Fresh Bread</h5>
+              <p>Artisanal bread baked daily with care</p>
+              <div class="service-features">
+                <div class="feature-item">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <span>Daily Fresh</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <span>Traditional Recipes</span>
+                </div>
+              </div>
+              <a href="#menu" class="btn btn-outline-brand mt-3">View Menu</a>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="service theme-shadow">
+              <div class="iconbox service-icon">
+                <i class="ri-cake-2-line"></i>
+              </div>
+              <h5>Pastries</h5>
+              <p>Delightful pastries and sweet treats</p>
+              <div class="service-features">
+                <div class="feature-item">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <span>Handcrafted</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <span>Premium Quality</span>
+                </div>
+              </div>
+              <a href="#menu" class="btn btn-outline-brand mt-3">Explore</a>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="service theme-shadow">
+              <div class="iconbox service-icon">
+                <i class="ri-gift-line"></i>
+              </div>
+              <h5>Gift Boxes</h5>
+              <p>Curated gift boxes for special moments</p>
+              <div class="service-features">
+                <div class="feature-item">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <span>Customizable</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <span>Free Delivery</span>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-outline-brand mt-3">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Counter -->
     <section id="counter" class="section-padding">
-        <div class="container text-center">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up">
-                    <div class="counter-item">
-                        <div class="counter-icon">
-                            <i class="ri-user-smile-fill"></i>
-                        </div>
-                        <h1 class="text-white display-4 counter-number">10,000+</h1>
-                        <h6 class="text-uppercase mb-0 text-white mt-3">Happy Customers</h6>
-                        <div class="counter-line"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="counter-item">
-                        <div class="counter-icon">
-                            <i class="ri-cake-3-fill"></i>
-                        </div>
-                        <h1 class="text-white display-4 counter-number">50,000+</h1>
-                        <h6 class="text-uppercase mb-0 text-white mt-3">Cakes Baked</h6>
-                        <div class="counter-line"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="counter-item">
-                        <div class="counter-icon">
-                            <i class="ri-bread-fill"></i>
-                        </div>
-                        <h1 class="text-white display-4 counter-number">100,000+</h1>
-                        <h6 class="text-uppercase mb-0 text-white mt-3">Fresh Loaves</h6>
-                        <div class="counter-line"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="counter-item">
-                        <div class="counter-icon">
-                            <i class="ri-calendar-event-fill"></i>
-                        </div>
-                        <h1 class="text-white display-4 counter-number">999+</h1>
-                        <h6 class="text-uppercase mb-0 text-white mt-3">Events Catered</h6>
-                        <div class="counter-line"></div>
-                    </div>
-                </div>
+      <div class="container text-center">
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6" data-aos="fade-up">
+            <div class="counter-item">
+              <div class="counter-icon">
+                <i class="ri-user-smile-fill"></i>
+              </div>
+              <h1 class="text-white display-4 counter-number">10,000+</h1>
+              <h6 class="text-uppercase mb-0 text-white mt-3">
+                Happy Customers
+              </h6>
+              <div class="counter-line"></div>
             </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="counter-item">
+              <div class="counter-icon">
+                <i class="ri-cake-3-fill"></i>
+              </div>
+              <h1 class="text-white display-4 counter-number">50,000+</h1>
+              <h6 class="text-uppercase mb-0 text-white mt-3">Cakes Baked</h6>
+              <div class="counter-line"></div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="counter-item">
+              <div class="counter-icon">
+                <i class="ri-restaurant-2-line"></i>
+              </div>
+              <h1 class="text-white display-4 counter-number">100,000+</h1>
+              <h6 class="text-uppercase mb-0 text-white mt-3">Fresh Loaves</h6>
+              <div class="counter-line"></div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="counter-item">
+              <div class="counter-icon">
+                <i class="ri-calendar-event-fill"></i>
+              </div>
+              <h1 class="text-white display-4 counter-number">999+</h1>
+              <h6 class="text-uppercase mb-0 text-white mt-3">
+                Events Catered
+              </h6>
+              <div class="counter-line"></div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold" data-aos="fade-up">Contact Us</h1>
-                        <div class="line"></div>
-                        <p data-aos="fade-up" data-aos-delay="100">Get in touch for custom orders and inquiries</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold" data-aos="fade-up">
+                Contact Us
+              </h1>
+              <div class="line"></div>
+              <p data-aos="fade-up" data-aos-delay="100">
+                Get in touch for custom orders and inquiries
+              </p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <form class="contact-form theme-shadow p-4 p-lg-5 rounded" data-aos="fade-up">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                                    <label for="name"><i class="ri-user-line me-2"></i>Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                                    <label for="email"><i class="ri-mail-line me-2"></i>Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject"><i class="ri-chat-1-line me-2"></i>Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
-                                    <label for="message"><i class="ri-message-2-line me-2"></i>Your Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-brand px-5 py-3">
-                                    <i class="ri-send-plane-fill me-2"></i>Send Message
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="row g-4">
+          <!-- Contact Info -->
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="contact-info-card theme-shadow p-4 rounded">
+              <h4 class="mb-4">Contact Information</h4>
+              <div class="contact-info-item d-flex align-items-center mb-4">
+                <div class="contact-icon">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <div class="contact-text ms-3">
+                  <h6 class="mb-1">Our Location</h6>
+                  <p class="mb-0">Fraîcheur, Pokhara, Nepal</p>
+                </div>
+              </div>
+              <div class="contact-info-item d-flex align-items-center mb-4">
+                <div class="contact-icon">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <div class="contact-text ms-3">
+                  <h6 class="mb-1">Phone Number</h6>
+                  <p class="mb-0">(555) 123-987456</p>
+                </div>
+              </div>
+              <div class="contact-info-item d-flex align-items-center mb-4">
+                <div class="contact-icon">
+                  <i class="ri-mail-line"></i>
+                </div>
+                <div class="contact-text ms-3">
+                  <h6 class="mb-1">Email Address</h6>
+                  <p class="mb-0">info@fraicheur.com</p>
+                </div>
+              </div>
+              <div class="contact-info-item d-flex align-items-center">
+                <div class="contact-icon">
+                  <i class="ri-time-line"></i>
+                </div>
+                <div class="contact-text ms-3">
+                  <h6 class="mb-1">Working Hours</h6>
+                  <p class="mb-0">Mon - Fri: 7:00 AM - 8:00 PM</p>
+                  <p class="mb-0">Sat - Sun: 8:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+              <div class="social-links mt-4">
+                <a href="#" class="social-link" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+                <a href="#" class="social-link" aria-label="WhatsApp"><i class="ri-whatsapp-fill"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-form theme-shadow p-4 p-lg-5 rounded">
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" placeholder="Your Name" required />
+                      <label for="name"><i class="ri-user-line me-2"></i>Your Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="email" placeholder="Your Email" required />
+                      <label for="email"><i class="ri-mail-line me-2"></i>Your Email</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="tel" class="form-control" id="phone" placeholder="Your Phone" />
+                      <label for="phone"><i class="ri-phone-line me-2"></i>Your Phone</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="subject" name="subject" required>
+                            <option value="" selected disabled>Select a subject</option>
+                            <option value="custom-order">Custom Order</option>
+                            <option value="catering">Catering</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="subject">Subject</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                      <label for="message"><i class="ri-message-2-line me-2"></i>Your Message</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                      <label class="form-check-label" for="newsletter">
+                        Subscribe to our newsletter for updates and special offers
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-brand px-5 py-3">
+                      <i class="ri-send-plane-fill me-2"></i>Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-widget">
-                            <div class="footer-logo">
-                                <i class="ri-bread-fill me-2"></i>Fraîcheur
-                            </div>
-                            <p class="mt-3">Bringing joy through artisanal baking since 2010. We craft each product with love and dedication to ensure the perfect taste and experience.</p>
-                            <div class="footer-social mt-4">
-                                <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
-                                <a href="#" class="social-link"><i class="ri-instagram-fill"></i></a>
-                                <a href="#" class="social-link"><i class="ri-twitter-fill"></i></a>
-                                <a href="#" class="social-link"><i class="ri-pinterest-fill"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-widget">
-                            <h5 class="widget-title">Quick Links</h5>
-                            <ul class="footer-links">
-                                <li><a href="#hero"><i class="ri-arrow-right-s-line"></i>Home</a></li>
-                                <li><a href="#about"><i class="ri-arrow-right-s-line"></i>About</a></li>
-                                <li><a href="#menu"><i class="ri-arrow-right-s-line"></i>Menu</a></li>
-                                <li><a href="#services"><i class="ri-arrow-right-s-line"></i>Services</a></li>
-                                <li><a href="#contact"><i class="ri-arrow-right-s-line"></i>Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h5 class="widget-title">Opening Hours</h5>
-                            <ul class="footer-hours">
-                                <li>
-                                    <span>Monday - Friday</span>
-                                    <span>7:00 AM - 8:00 PM</span>
-                                </li>
-                                <li>
-                                    <span>Saturday</span>
-                                    <span>8:00 AM - 6:00 PM</span>
-                                </li>
-                                <li>
-                                    <span>Sunday</span>
-                                    <span>9:00 AM - 4:00 PM</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h5 class="widget-title">Contact Info</h5>
-                            <ul class="footer-contact">
-                                <li>
-                                    <i class="ri-map-pin-line"></i>
-                                    <span>123 Bakery Street, City, Country</span>
-                                </li>
-                                <li>
-                                    <i class="ri-phone-line"></i>
-                                    <span>(555) 123-4567</span>
-                                </li>
-                                <li>
-                                    <i class="ri-mail-line"></i>
-                                    <span>info@fraicheur.com</span>
-                                </li>
-                            </ul>
-                            <div class="footer-newsletter mt-4">
-                                <h6>Subscribe to Newsletter</h6>
-                                <form class="newsletter-form">
-                                    <input type="email" placeholder="Your email address">
-                                    <button type="submit"><i class="ri-send-plane-fill"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <i class="ri-bread-fill me-2"></i>Fraîcheur
                 </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="mb-0">&copy; 2024 Fraîcheur Bakery. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <div class="footer-bottom-links">
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Terms of Service</a>
-                            <a href="#">Cookie Policy</a>
-                        </div>
-                    </div>
+                <p class="mt-3">
+                  Bringing joy through artisanal baking since 2010. We craft
+                  each product with love and dedication to ensure the perfect
+                  taste and experience.
+                </p>
+                <div class="footer-social mt-4">
+                  <a href="#" class="social-link" aria-label="Facebook"
+                    ><i class="ri-facebook-fill"></i
+                  ></a>
+                  <a href="#" class="social-link" aria-label="Instagram"
+                    ><i class="ri-instagram-fill"></i
+                  ></a>
+                  <a href="#" class="social-link" aria-label="Twitter"
+                    ><i class="ri-twitter-fill"></i
+                  ></a>
+                  <a href="#" class="social-link" aria-label="Pinterest"
+                    ><i class="ri-pinterest-fill"></i
+                  ></a>
                 </div>
+              </div>
             </div>
+            <div class="col-lg-2 col-md-6">
+              <div class="footer-widget">
+                <h5 class="widget-title">Quick Links</h5>
+                <ul class="footer-links">
+                  <li>
+                    <a href="#hero"
+                      ><i class="ri-arrow-right-s-line"></i>Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#about"
+                      ><i class="ri-arrow-right-s-line"></i>About</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#menu"
+                      ><i class="ri-arrow-right-s-line"></i>Menu</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#services"
+                      ><i class="ri-arrow-right-s-line"></i>Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#contact"
+                      ><i class="ri-arrow-right-s-line"></i>Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h5 class="widget-title">Contact Info</h5>
+                <ul class="footer-contact">
+                  <li>
+                    <i class="ri-map-pin-line"></i>
+                    <span>Fraîcheur, Pokhara, Nepal</span>
+                  </li>
+                  <li>
+                    <i class="ri-phone-line"></i>
+                    <span>(555) 123-987456</span>
+                  </li>
+                  <li>
+                    <i class="ri-mail-line"></i>
+                    <span>info@fraicheur.com</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget h-100">
+                <h5 class="widget-title">Our Location</h5>
+                <div class="footer-map">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224976.98467519842!2d83.7918074927415!3d28.22962361481451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara!5e0!3m2!1sen!2snp!4v1747041912655!5m2!1sen!2snp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="mb-0">
+                &copy; 2024 Fraîcheur Bakery. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
-</body>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
 
+      // Theme Switcher
+      const themeToggle = document.getElementById("theme-toggle");
+      const prefersDarkScheme = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      );
+
+      // Check for saved theme preference or use system preference
+      const currentTheme =
+        localStorage.getItem("theme") ||
+        (prefersDarkScheme.matches ? "dark" : "light");
+
+      // Set initial theme
+      document.body.classList.toggle("dark-theme", currentTheme === "dark");
+
+      // Theme toggle click handler
+      themeToggle.addEventListener("click", () => {
+        const isDark = document.body.classList.toggle("dark-theme");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+
+      // Announcement Bar Scroll Behavior
+      let lastScrollTop = 0;
+      const announcementBar = document.querySelector('.announcement-bar');
+      
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down
+          announcementBar.classList.add('hidden');
+        } else {
+          // Scrolling up
+          announcementBar.classList.remove('hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+      });
+    </script>
+  </body>
 </html>
